@@ -237,6 +237,19 @@
         overflow-wrap: anywhere;
     }
 }
+
+/* Creative Content and Leadership: vertical layout */
+.info-sections {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    padding: 0 8% 80px;
+}
+
+.info-sections .info-card {
+    width: 100%;
+    box-sizing: border-box;
+}
         
     </style>
 </head>
@@ -297,14 +310,9 @@
 
     
     <section class="info-sections">
-        <div class="info-card">
-            <div class="mono" style="color: var(--logo-teal); margin-bottom: 12px;">Milestones</div>
-            <h3 class="mono">History</h3>
-            <ul class="info-list">
-                <li><span>Established:</span> Dec 19, 2025</li>
-                <li><span>Operations Commenced:</span> Jan 06, 2026</li>
-            </ul>
-        </div>
+
+
+        
         <div class="info-card">
             <div class="mono" style="color: var(--logo-teal); margin-bottom: 12px;">Leadership</div>
             <h3 class="mono">People</h3>
