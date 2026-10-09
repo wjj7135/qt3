@@ -238,6 +238,37 @@
     }
 }
 
+
+<!-- Creative Content Section -->
+<section class="creative-content" id="creative-content">
+    <div class="creative-header">
+        <h2>Creative Content</h2>
+        <p>Creating original stories, visuals, and digital content across multiple platforms.</p>
+    </div>
+
+    <div class="creative-grid">
+        <div class="creative-card">
+            <h3>PUBLISHING</h3>
+        </div>
+
+        <div class="creative-card">
+            <h3>YOUTUBE</h3>
+        </div>
+
+        <div class="creative-card">
+            <h3>ILLUSTRATION</h3>
+        </div>
+
+        <div class="creative-card">
+            <h3>EMOTICONS</h3>
+        </div>
+
+        <div class="creative-card">
+            <h3>SOCIAL CONTENT</h3>
+        </div>
+    </div>
+</section>
+        
 /* Creative Content and Leadership: vertical layout */
 .info-sections {
     display: grid;
@@ -250,6 +281,93 @@
     width: 100%;
     box-sizing: border-box;
 }
+
+
+/* Creative Content Section */
+.creative-content {
+    width: 100%;
+    padding: 0 8% 35px;
+    box-sizing: border-box;
+    color: var(--text-main);
+}
+
+.creative-header {
+    text-align: center;
+    padding: 20px 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.creative-header h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 2px;
+}
+
+.creative-header p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.creative-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    padding: 20px 0 0;
+}
+
+.creative-card {
+    min-width: 0;
+    min-height: 150px;
+    padding: 15px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.creative-card:hover {
+    border-color: var(--logo-teal);
+    background: rgba(57, 181, 188, 0.08);
+}
+
+.creative-card h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+    .creative-content {
+        padding: 0 5% 30px;
+    }
+
+    .creative-header h2 {
+        font-size: 24px;
+    }
+
+    .creative-header p {
+        font-size: 14px;
+    }
+
+    .creative-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .creative-card {
+        min-height: 110px;
+    }
+
+    .creative-card h3 {
+        font-size: 13px;
+    }
+}
+
         
     </style>
 </head>
