@@ -340,6 +340,27 @@
     }
 }
 
+        margin-bottom: 18px;
+}
+
+.leadership-card p {
+    color: var(--text-dim);
+    margin-bottom: 12px;
+}
+
+@media (max-width: 700px) {
+    .leadership-section {
+        padding: 0 5% 50px;
+    }
+
+    .leadership-card {
+        padding: 25px;
+    }
+
+    .leadership-header h2 {
+        font-size: 24px;
+    }
+}
         
     </style>
 </head>
@@ -429,19 +450,26 @@
     </div>
 </section>
             
-    <section class="info-sections">
+<!-- Leadership Section -->
+<section class="leadership-section" id="leadership">
+    <div class="leadership-header">
+        <h2>Leadership</h2>
+    </div>
 
-
-        
-        <div class="info-card">
-            <div class="mono" style="color: var(--logo-teal); margin-bottom: 12px;">Leadership</div>
-            <h3 class="mono">People</h3>
-            <ul class="info-list">
-                <li><span class="clickable-name" onclick="showBio('cje.html')">Changsoo Je, PhD</span> / Chief Executive Officer</li>
-                <li><span class="clickable-name" onclick="showBio('wjj.html')">Woojeong Jeon</span> / Director</li>
-            </ul>
+    <div class="leadership-grid">
+        <div class="leadership-card">
+            <div class="mono leadership-label">PEOPLE</div>
+            <p>
+                <span class="clickable-name" onclick="showBio('cje.html')">Changsoo Je, PhD</span>
+                / Chief Executive Officer
+            </p>
+            <p>
+                <span class="clickable-name" onclick="showBio('wjj.html')">Woojeong Jeon</span>
+                / Director
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
     <div id="bioModal" class="modal">
         <div class="modal-content">
