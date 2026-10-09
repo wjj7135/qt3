@@ -144,7 +144,7 @@
     .pillars {
         grid-template-columns: 1fr;
         gap: 28px;
-        padding: 70px 5%;
+        padding: 100px 6%;;
     }
 }
 
@@ -161,10 +161,12 @@
 }
 
 .pillars-grid {
-    display: grid;
+ display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
     min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .pillars-grid .pillar-card {
