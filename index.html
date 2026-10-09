@@ -359,13 +359,63 @@
         padding: 25px;
     }
 
-    .leadership-header h2 {
-            font-size: 30px !important;
-    line-height: 1.4;
-    margin-bottom: 2px;
-    }
+
 }
 
+/* Leadership Section */
+.leadership-section {
+    width: 100%;
+    padding: 0 8% 80px;
+    box-sizing: border-box;
+}
+
+.leadership-header {
+    text-align: center;
+    padding: 20px 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.leadership-header h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 2px;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+}
+
+.leadership-card {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-card);
+    padding: 45px;
+    border-radius: 4px;
+}
+
+.leadership-card p {
+    color: var(--text-dim);
+    margin-bottom: 12px;
+}
+
+@media (max-width: 700px) {
+    .leadership-section {
+        padding: 0 5% 50px;
+    }
+
+    .leadership-card {
+        padding: 25px;
+    }
+
+    .leadership-header h2 {
+        font-size: 30px;
+        line-height: 1.4;
+        margin-bottom: 2px;
+    }
+}
+        
         /* Center align Leadership content */
 .leadership-header {
     text-align: center;
