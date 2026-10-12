@@ -556,12 +556,29 @@
         <div class="pillar-card">
             <div class="pillar-icon">아이콘<br>삽입 예정</div>
             <h3>DATA<br>AUGMENTATION</h3>
-        </div>
-
-        <div class="pillar-card">
-            <div class="pillar-icon">아이콘<br>삽입 예정</div>
-            <h3>VIDEO<br>GENERATION</h3>
-        </div>
+<div class="pillar-icon">
+    <svg viewBox="0 0 100 100" class="led-icon" aria-label="Data Augmentation">
+        <defs>
+            <filter id="led-glow-2" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        <g fill="none" stroke="#bdfaff" stroke-width="1.2"
+           stroke-linejoin="round" filter="url(#led-glow-2)">
+            <path d="M50 24 L82 40 L50 56 L18 40 Z" opacity="0.95"/>
+            <path d="M18 50 L50 66 L82 50" opacity="0.8"/>
+            <path d="M18 60 L50 76 L82 60" opacity="0.65"/>
+            <path d="M30 19 V75 M40 14 V80 M50 10 V84 M60 14 V80 M70 19 V75"
+                  stroke-dasharray="1 4" opacity="0.8"/>
+            <circle cx="50" cy="10" r="1.5" fill="#ffffff" stroke="none"/>
+            <circle cx="50" cy="84" r="1.5" fill="#ffffff" stroke="none"/>
+        </g>
+    </svg>
+</div>
     </div>
 </section>
 
