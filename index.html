@@ -186,13 +186,48 @@ drop-shadow(0 0 24px rgba(57, 181, 188, 0.22));
 
 ```css
 @media (max-width: 700px) {
-    .hero {
-        flex-direction: row;
-        align-items: center;
-        padding: 35px 4%;
-        gap: 8px;
-        min-height: auto;
-    }
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 35px 4%;
+    gap: 8px;
+    min-height: auto;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1.1;
+    width: auto;
+    min-width: 0;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 8vw, 58px);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+}
+
+.hero-content p {
+    font-size: clamp(14px, 3.5vw, 20px);
+    line-height: 1.6;
+}
+
+.hero-image {
+    flex: 0.9;
+    width: auto;
+    min-width: 0;
+    min-height: 0;
+    margin-top: 180px;
+}
+
+.hero-logo-container {
+    width: 100%;
+    max-width: 220px;
+}
+
+.hero-logo-ring {
+    width: 90%;
+}
 
     .hero-content {
         flex: 1.1;
