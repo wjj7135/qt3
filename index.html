@@ -428,6 +428,66 @@
 .leadership-label {
     text-align: center;
 }
+
+/* Sponsorships Section */
+.sponsorships-section {
+    width: 100%;
+    padding: 0 8% 80px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sponsorships-header {
+    text-align: center;
+    padding: 20px 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.sponsorships-header h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 2px;
+}
+
+.sponsorships-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.sponsorship-link {
+    display: inline-block;
+    max-width: 800px;
+    color: var(--text-dim);
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sponsorship-link:hover {
+    color: var(--logo-teal);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+    .sponsorships-section {
+        padding: 0 5% 50px;
+    }
+
+    .sponsorships-header h2 {
+        font-size: 30px;
+    }
+
+    .sponsorship-link {
+        font-size: 16px;
+    }
+}
+        
         
     </style>
 </head>
