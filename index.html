@@ -182,39 +182,47 @@ drop-shadow(0 0 24px rgba(57, 181, 188, 0.22));
     font-weight: 800;
 }
 
+
+
+```css
 @media (max-width: 700px) {
     .hero {
-        flex-direction: column;
-        padding: 60px 6%;
-        gap: 35px;
+        flex-direction: row;
+        align-items: center;
+        padding: 35px 4%;
+        gap: 8px;
         min-height: auto;
     }
 
     .hero-content {
-        width: 100%;
+        flex: 1.1;
+        width: auto;
+        min-width: 0;
     }
 
     .hero-image {
-        width: 100%;
-        min-height: 300px;
+        flex: 0.9;
+        width: auto;
+        min-width: 0;
+        min-height: 0;
     }
 
     .hero-logo-container {
-     width: min(85%, 272px);
+        width: 100%;
+        max-width: 220px;
     }
 
-.hero-logo-ring {
-    position: absolute;
-    width: 62%;
-    aspect-ratio: 1 / 1;
-    border: 1px solid rgba(57, 181, 188, 0.35);
-    border-radius: 50%;
-    box-shadow:
-        0 0 12px rgba(57, 181, 188, 0.12),
-        inset 0 0 12px rgba(57, 181, 188, 0.05);
-    pointer-events: none;
+    .hero-logo-ring {
+        width: 90%;
+    }
 }
-}
+```
+
+
+
+
+
+        
 ```
         /* Information Cards */
         .pillars, .info-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 0 8% 80px; }
