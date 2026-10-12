@@ -615,6 +615,29 @@
     color: #10220b;
     text-decoration: none;
 }
+
+
+/* Soft glow for CONTACT US button */
+.cta-btn {
+    box-shadow:
+        0 0 10px rgba(57, 181, 188, 0.25),
+        0 0 22px rgba(57, 181, 188, 0.15);
+    animation: contactGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes contactGlow {
+    from {
+        box-shadow:
+            0 0 8px rgba(57, 181, 188, 0.2),
+            0 0 16px rgba(57, 181, 188, 0.1);
+    }
+    to {
+        box-shadow:
+            0 0 14px rgba(57, 181, 188, 0.45),
+            0 0 28px rgba(57, 181, 188, 0.25);
+    }
+}
+        
         
     </style>
 </head>
