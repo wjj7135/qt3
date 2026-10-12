@@ -94,20 +94,27 @@
     isolation: isolate;
 }
 
+
 .hero-image::before {
     content: '';
     position: absolute;
     width: min(100%, 460px);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+
+    /* 로고 뒤쪽에 은은한 청록색 빛 */
     background: radial-gradient(
         circle,
-        rgba(57, 181, 188, 0.22) 0%,
-        rgba(57, 181, 188, 0.08) 45%,
-        transparent 72%
+        rgba(57, 181, 188, 0.20) 0%,
+        rgba(57, 181, 188, 0.12) 40%,
+        rgba(57, 181, 188, 0.05) 58%,
+        transparent 75%
     );
-    filter: blur(18px);
+
+    filter: blur(35px);
+    transform: scale(1.15);
     z-index: -1;
+    pointer-events: none;
 }
 
 .hero-logo-ring {
