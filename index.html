@@ -529,20 +529,25 @@
         <h2>and content generation.</h2>
     </div>
 
-    <div class="pillars-grid">
-        <div class="pillar-card">
-            <div class="pillar-icon">
-    <svg width="90" height="90" viewBox="0 0 100 100"
-         xmlns="http://www.w3.org/2000/svg"
-         fill="none" stroke="white" stroke-width="4.5"
-         stroke-linecap="round" stroke-linejoin="round"
-         aria-label="Structured light icon">
-        <path d="M50 10 V69"/>
-        <path d="M38 57 L50 69 L62 57"/>
-        <path d="M50 69 V91"/>
-        <path d="M29 69 H71"/>
-        <path d="M35 54 L65 84"/>
-        <path d="M65 54 L35 84"/>
+<div class="pillar-icon">
+    <svg viewBox="0 0 100 100" class="led-icon" aria-label="Structured Light">
+        <defs>
+            <filter id="led-glow-1" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        <g fill="none" stroke="#bdfaff" stroke-linecap="round"
+           stroke-linejoin="round" filter="url(#led-glow-1)">
+            <circle cx="50" cy="50" r="28" stroke-width="0.7" opacity="0.35"/>
+            <circle cx="50" cy="50" r="19" stroke-width="0.5" opacity="0.25"/>
+            <path d="M50 20 V80 M20 50 H80 M29 29 L71 71 M71 29 L29 71"
+                  stroke-width="1.8"/>
+            <circle cx="50" cy="50" r="3" fill="#ffffff" stroke="none"/>
+        </g>
     </svg>
 </div>
             <h3>STRUCTURED<br>LIGHT</h3>
