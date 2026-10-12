@@ -126,7 +126,7 @@
 .hero-logo-container {
     display: block;
     position: relative;
-    width: min(100%, 300px);
+    width: min(100%, 460px);
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: contain;
@@ -191,9 +191,17 @@
         width: min(100%, 320px);
     }
 
-    .hero-logo-ring {
-        width: min(90%, 300px);
-    }
+.hero-logo-ring {
+    position: absolute;
+    width: 62%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgba(57, 181, 188, 0.35);
+    border-radius: 50%;
+    box-shadow:
+        0 0 12px rgba(57, 181, 188, 0.12),
+        inset 0 0 12px rgba(57, 181, 188, 0.05);
+    pointer-events: none;
+}
 }
 ```
         /* Information Cards */
