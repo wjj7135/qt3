@@ -69,7 +69,8 @@
         }
 
 
-/* Hero */
+
+/* Hero - Desktop */
 .hero {
     display: flex;
     align-items: center;
@@ -94,15 +95,12 @@
     isolation: isolate;
 }
 
-
 .hero-image::before {
     content: '';
     position: absolute;
     width: min(100%, 460px);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-
-    /* 로고 뒤쪽에 은은한 청록색 빛 */
     background: radial-gradient(
         circle,
         rgba(57, 181, 188, 0.20) 0%,
@@ -110,7 +108,6 @@
         rgba(57, 181, 188, 0.05) 58%,
         transparent 75%
     );
-
     filter: blur(35px);
     transform: scale(1.15);
     z-index: -1;
@@ -129,45 +126,39 @@
     pointer-events: none;
 }
 
-
 .hero-logo-container {
     display: block;
     position: relative;
-   width: min(85%, 391px);
+    width: min(85%, 391px);
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: contain;
     border-radius: 50%;
     z-index: 1;
     animation: float 6s ease-in-out infinite;
-
--webkit-mask-image: radial-gradient(
-    circle at center,
-    black 35%,
-    rgba(0, 0, 0, 0.9) 45%,
-    rgba(0, 0, 0, 0.6) 55%,
-    rgba(0, 0, 0, 0.25) 65%,
-    rgba(0, 0, 0, 0.08) 72%,
-    transparent 78%
-);
-
-mask-image: radial-gradient(
-    circle at center,
-    black 35%,
-    rgba(0, 0, 0, 0.9) 45%,
-    rgba(0, 0, 0, 0.6) 55%,
-    rgba(0, 0, 0, 0.25) 65%,
-    rgba(0, 0, 0, 0.08) 72%,
-    transparent 78%
-);
-
-filter: drop-shadow(0 0 12px rgba(57, 181, 188, 0.25))
-drop-shadow(0 0 24px rgba(57, 181, 188, 0.22));
+    -webkit-mask-image: radial-gradient(
+        circle at center,
+        black 35%,
+        rgba(0, 0, 0, 0.9) 45%,
+        rgba(0, 0, 0, 0.6) 55%,
+        rgba(0, 0, 0, 0.25) 65%,
+        rgba(0, 0, 0, 0.08) 72%,
+        transparent 78%
+    );
+    mask-image: radial-gradient(
+        circle at center,
+        black 35%,
+        rgba(0, 0, 0, 0.9) 45%,
+        rgba(0, 0, 0, 0.6) 55%,
+        rgba(0, 0, 0, 0.25) 65%,
+        rgba(0, 0, 0, 0.08) 72%,
+        transparent 78%
+    );
+    filter:
+        drop-shadow(0 0 12px rgba(57, 181, 188, 0.25))
+        drop-shadow(0 0 24px rgba(57, 181, 188, 0.22));
 }
 
-
-
-        
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -180,6 +171,84 @@ drop-shadow(0 0 24px rgba(57, 181, 188, 0.22));
 .highlight {
     color: var(--logo-teal);
     font-weight: 800;
+}
+
+/* Hero - Mobile */
+@media (max-width: 700px) {
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        align-items: start;
+        padding: 35px 6%;
+        min-height: auto;
+        overflow: visible;
+    }
+
+    .hero-content {
+        display: contents;
+    }
+
+    .hero-content > .mono {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 16px !important;
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        font-size: 36px !important;
+        line-height: 1.15 !important;
+        text-align: left;
+        overflow-wrap: normal;
+        word-break: normal;
+        margin-bottom: 18px !important;
+    }
+
+    .hero-content p {
+        grid-column: 1;
+        grid-row: 3;
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px !important;
+        line-height: 1.7;
+        text-align: left;
+        margin-bottom: 24px !important;
+    }
+
+    .hero-image {
+        grid-column: 1;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+        margin: 0 0 24px;
+    }
+
+    .hero-logo-container {
+        width: 220px;
+        max-width: 75%;
+        height: auto;
+    }
+
+    .hero-logo-ring {
+        width: 90%;
+    }
+
+    .hero-content .cta-btn {
+        grid-column: 1;
+        grid-row: 5;
+        justify-self: start;
+        align-self: start;
+        min-width: 180px;
+        min-height: 52px;
+        margin: 0;
+    }
 }
 
 
