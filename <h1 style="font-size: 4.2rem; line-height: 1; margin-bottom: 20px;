@@ -767,7 +767,7 @@ height: 300px;
             AI TECHNOLOGY
         </div>
 
-        <h1 style="font-size: 4.2rem; line-height: 1; margin-bottom: 20px;">
+<h1 style="font-size: clamp(32px, 8vw, 58px); line-height: 1.05; margin-bottom: 20px; overflow-wrap: anywhere;">
             Intelligence, <br>
             <span class="highlight">Built for Reality</span>
         </h1>
