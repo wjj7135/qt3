@@ -981,23 +981,45 @@ height: 300px;
         <div class="flip-card-front">
             <div class="pillar-icon">
                 <!-- Video Generation 아이콘 -->
-                <svg viewBox="0 0 100 100" class="led-icon"
-                     xmlns="http://www.w3.org/2000/svg"
-                     aria-label="Video Generation">
-                    <g fill="none" stroke="#bdfaff"
-                       stroke-linejoin="round" stroke-linecap="round">
-                        <rect x="15" y="27" width="70" height="46"
-                              rx="3" stroke-width="1.5"/>
-                        <path d="M42 38 L42 62 L62 50 Z"
-                              fill="#bdfaff" stroke-width="1.2"/>
-                        <path d="M22 20 H78 M22 80 H78"
-                              stroke-width="1.2" opacity="0.8"/>
-                        <path d="M25 20 V27 M38 20 V27 M51 20 V27 M64 20 V27 M77 20 V27"
-                              stroke-width="1" opacity="0.7"/>
-                        <path d="M25 73 V80 M38 73 V80 M51 73 V80 M64 73 V80 M77 73 V80"
-                              stroke-width="1" opacity="0.7"/>
-                    </g>
-                </svg>
+               ```html
+<svg viewBox="0 0 100 100" class="led-icon"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-label="Video Generation">
+    <defs>
+        <filter id="glow-video">
+            <feGaussianBlur stdDeviation="1.8" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <g fill="none" stroke="#bdfaff"
+       stroke-linejoin="round" stroke-linecap="round"
+       filter="url(#glow-video)">
+
+        <!-- 타원형 궤도 -->
+        <ellipse cx="50" cy="50" rx="39" ry="19"
+                 stroke-width="0.8" opacity="0.75"
+                 transform="rotate(-18 50 50)"/>
+
+        <!-- 영상 화면 -->
+        <rect x="23" y="29" width="54" height="42"
+              rx="3" stroke-width="1.5"/>
+
+        <!-- 재생 버튼 -->
+        <path d="M44 39 L44 61 L62 50 Z"
+              stroke-width="1.5"
+              fill="#bdfaff" fill-opacity="0.2"/>
+
+        <!-- 궤도 위의 빛 입자 -->
+        <circle cx="14" cy="54" r="1.5" fill="#bdfaff" stroke="none"/>
+        <circle cx="79" cy="34" r="1.2" fill="#bdfaff" stroke="none"/>
+        <circle cx="68" cy="72" r="1" fill="#bdfaff" stroke="none"/>
+    </g>
+</svg>
+```
             </div>
             <h3>VIDEO<br>GENERATION</h3>
         </div>
