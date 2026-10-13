@@ -1342,6 +1342,29 @@ height: 300px;
             document.getElementById('bioModal').style.display = "none";
         }
 
+
+```javascript
+async function showResearchProfile() {
+    const container = document.getElementById('bioContainer');
+
+    try {
+        const response = await fetch('research-profile.html');
+        if (!response.ok) {
+            throw new Error('Research profile not found');
+        }
+
+        const html = await response.text();
+        container.innerHTML = html;
+    } catch (error) {
+        console.error('Error loading research profile:', error);
+        container.innerHTML = '<p>Research profile unavailable.</p>';
+    }
+}
+```
+
+
+        
+
         window.onclick = function(event) {
             if (event.target == document.getElementById('bioModal')) {
                 closeModal();
