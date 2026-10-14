@@ -268,40 +268,55 @@
         .clickable-name { color: var(--logo-teal); cursor: pointer; text-decoration: underline; text-underline-offset: 4px; transition: 0.2s; }
         .clickable-name:hover { color: #fff; }
 
-        /* Modal / Bio Popup */
+       /* Modal / Bio Popup */
 .modal {
     display: none;
     position: fixed;
     z-index: 2000;
-    left: 0;
-    top: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    padding: 24px 0;
 }
 
 .modal-content {
     position: relative;
     background-color: var(--bg-card);
-    margin: 5vh auto;
+    margin: 0 auto;
     padding: 40px;
     border: 1px solid var(--logo-teal);
     width: 80%;
     max-width: 800px;
-    max-height: 90vh;
-    overflow-y: auto;
     box-sizing: border-box;
     border-radius: 8px;
+    max-height: none;
+    overflow: visible;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fff;
 }
 
 @media (max-width: 700px) {
+    .modal {
+        padding: 12px 0;
+    }
+
     .modal-content {
         width: 92%;
         padding: 24px 18px;
-        margin: 3vh auto;
-        max-height: 94vh;
     }
 }
 
