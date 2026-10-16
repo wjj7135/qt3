@@ -1419,6 +1419,27 @@ footer > p {
             }
         }
 
+
+        async function showPublications() {
+    const container = document.getElementById('bioContainer');
+
+    try {
+        const response = await fetch('publications.html');
+
+        if (!response.ok) {
+            throw new Error('Publications page not found');
+        }
+
+        const html = await response.text();
+        container.innerHTML = html;
+
+    } catch (error) {
+        console.error('Error loading publications:', error);
+        container.innerHTML =
+            '<p>Publications could not be loaded.</p>';
+    }
+}
+
         window.onclick = function(event) {
             if (event.target == document.getElementById('bioModal')) {
                 closeModal();
